@@ -1,6 +1,10 @@
 
 function init(){
   console.log("init");
+
+  $(".main").onepage_scroll({
+    
+  });
 }
 
 
