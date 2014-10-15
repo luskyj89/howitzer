@@ -3,19 +3,20 @@
  */
 
 
-/// Imports
+//// Imports//
 @import "bourbon";
 @import "_normalize";
 @import "_onepage-scroll";
+@import "_fancybox";
 
 
-/// Colors
+//// Colors//
 $white: #ffffff;
 $black: #000000;
 $lightGray: #C7C7C7;
 $darkGray: #111111;
 
-/// Fonts
+//// Fonts//
 @font-face {
     font-family: 'mohavebold';
     src: url('../fonts/mohave-bold-webfont.eot');
@@ -28,7 +29,7 @@ $darkGray: #111111;
 }
 $mohaveBold: 'mohavebold', arial, sans-serif;
 
-/// Mixins
+//// Mixins//
 @mixin textIndent() {
     text-indent: 100%;
     white-space: nowrap;
@@ -36,7 +37,7 @@ $mohaveBold: 'mohavebold', arial, sans-serif;
 }
 
 
-/// Boilerplate nonsense
+//// Boilerplate nonsense//
 html,
 button,
 input,
@@ -152,7 +153,7 @@ textarea {
 }
 
 
-/// Globals
+//// Globals//
 body {
     -webkit-font-smoothing: antialiased;
 }
@@ -166,7 +167,7 @@ body {
 }
 
 
-/// Entries
+//// Entries//
 .entry {
     width: 100%;
     height: 100%;
@@ -175,7 +176,7 @@ body {
     background-position: top left;
 
     .entry-info {
-    //    display: none;
+    //  display: none;
         position: absolute;
         bottom: 0px;
         left: 0px;
@@ -185,17 +186,28 @@ body {
         color: $white;
     }
 
-
     .content {
-        width: 700px;
-        height: 450px;
-        margin: -225px 0 0 -350px;
-        overflow-y: auto;
-        overflow-x: hidden;
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 700px;
+        max-height: 450px;
+        overflow: hidden;
+        transform: translate(-50%, -50%);
         color: $lightGray;
     }
 
+    .video {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+.fancybox-thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
