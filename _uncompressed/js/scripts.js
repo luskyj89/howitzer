@@ -1,6 +1,12 @@
 
 
-function init(){
+function closeNav() {
+    $("nav").removeClass("active");
+    $("#hamburger").removeClass("active");
+}
+
+
+function init() {
     console.log("init");
 
     $(".main").onepage_scroll({
@@ -10,10 +16,16 @@ function init(){
             $("#logo").animate({ opacity: .5 },800);
             $(".entry-info").animate({ opacity: 0 },300);
             $.fancybox.close( true );
+            closeNav();
         },
         afterMove: function(index) {
             $(".entry-info").animate({ opacity: 1 },400);
         }
+    });
+
+    $("#hamburger").click(function() {
+        $("#hamburger").toggleClass("active");
+        $("nav").toggleClass("active");
     });
 
     $("#logo")
@@ -24,12 +36,14 @@ function init(){
         $("#logo").stop(true, false).animate({ opacity: .5 },500);
     });
 
-
+    $(".entry").click(function(){
+        closeNav();
+    });
 
 }
 
 
-$(document).ready(function(){
+$(document).ready(function() {
     init();
 
     $(".video").fitVids();
