@@ -48,7 +48,6 @@ $(document).ready(function() {
 
     $(".video").fitVids();
 
-    $(document).ready(function() {
 	$(".fancybox-thumb").fancybox({
 		prevEffect	: 'fade',
 		nextEffect	: 'fade',
@@ -62,6 +61,5 @@ $(document).ready(function() {
 			}
 		}
 	});
-});
 
 });

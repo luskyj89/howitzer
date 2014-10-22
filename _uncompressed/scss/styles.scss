@@ -221,6 +221,42 @@ body {
     overflow: hidden;
 }
 
+section {
+
+    .pagination {
+        display: none;
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        margin-left: 170px;
+        font-family: $mohaveBold;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+    &:nth-child(5) {
+
+        .pagination {
+            display: block;
+        }
+
+    }
+
+}
+
 nav {
     position: absolute;
     bottom: 0;
