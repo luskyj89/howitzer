@@ -16,28 +16,29 @@ $black: #000000;
 $lightGray: #C7C7C7;
 $darkGray: #111111;
 
+
 //// Fonts//
-@font-face {
+/*@font-face {
     font-family: 'mohavebold';
-    src: url('../fonts/mohave-bold-webfont.eot');
-    src: url('../fonts/mohave-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/mohave-bold-webfont.woff') format('woff'),
-         url('../fonts/mohave-bold-webfont.ttf') format('truetype'),
-         url('../fonts/mohave-bold-webfont.svg#mohavebold') format('svg');
+    src: url('http://johnlusky.com/themecannon/howitzer/fonts/mohave-bold-webfont.eot');
+    src: url('http://johnlusky.com/themecannon/howitzer/fonts/mohave-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://johnlusky.com/themecannon/howitzer/fonts/mohave-bold-webfont.woff') format('woff'),
+         url('http://johnlusky.com/themecannon/howitzer/fonts/mohave-bold-webfont.ttf') format('truetype'),
+         url('http://johnlusky.com/themecannon/howitzer/fonts/mohave-bold-webfont.svg#mohavebold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'icomoon';
-    src:url('../fonts/icomoon.eot?n9qn9x');
-    src:url('../fonts/icomoon.eot?#iefixn9qn9x') format('embedded-opentype'),
-        url('../fonts/icomoon.woff?n9qn9x') format('woff'),
-        url('../fonts/icomoon.ttf?n9qn9x') format('truetype'),
-        url('../fonts/icomoon.svg?n9qn9x#icomoon') format('svg');
+    src:url('http://johnlusky.com/themecannon/howitzer/fonts/icomoon.eot?n9qn9x');
+    src:url('http://johnlusky.com/themecannon/howitzer/fonts/icomoon.eot?#iefixn9qn9x') format('embedded-opentype'),
+        url('http://johnlusky.com/themecannon/howitzer/fonts/icomoon.woff?n9qn9x') format('woff'),
+        url('http://johnlusky.com/themecannon/howitzer/fonts/icomoon.ttf?n9qn9x') format('truetype'),
+        url('http://johnlusky.com/themecannon/howitzer/fonts/icomoon.svg?n9qn9x#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
 [class^="icon-"], [class*=" icon-"] {
     font-family: 'icomoon';
@@ -221,6 +222,30 @@ body {
     overflow: hidden;
 }
 
+a {
+    color: #1ba1bf;
+
+    &:hover {
+        color: #fc6232;
+    }
+
+}
+
+.caption {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.like-btn {
+    float: left;
+    margin-right: 10px;
+}
+
+.reblog-btn {
+    float: left;
+}
+
 section {
 
     .pagination {
@@ -380,6 +405,11 @@ nav {
         background: rgba(0, 0, 0, 0.8);
         padding: 30px;
         color: $white;
+
+        p {
+            margin: 0;
+        }
+
     }
 
     .content {

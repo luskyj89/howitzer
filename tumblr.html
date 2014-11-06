@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{Title}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="http://static.tumblr.com/qav74ey/itknelrb1/styles.css">
+
+        <script src="http://static.tumblr.com/qav74ey/zsYnejtfj/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+
+        <figure id="logo">
+            <a href="#" title="Blog Title"><img src="{PortraitURL-96}" alt="Logo" /></a>
+        </figure>
+
+        <a id="hamburger" href="#" title="Navigation Menu">h</a>
+
+        <nav>
+            <ul>
+                <li><a class="nav-item" href="#" title="About">About</a></li>
+                <li><a class="nav-item" href="#" title="Archive">Archive</a></li>
+                <li><a class="nav-item" href="#" title="Ask Me">Ask Me</a></li>
+                <li><a class="nav-item" href="#" title="Submit">Submit</a></li>
+            </ul>
+            <ul class="social">
+                <li><a href="#" title="Facebook">f</a></li>
+                <li><a href="#" title="Twitter">t</a></li>
+                <li><a href="#" title="Google Plus">g</a></li>
+                <li><a href="#" title="Instagram">i</a></li>
+                <li><a href="#" title="Pintrest">p</a></li>
+                <li><a href="#" title="Steam">s</a></li>
+                <li><a href="#" title="Email">e</a></li>
+                <li><a href="#" title="RSS">r</a></li>
+        </nav>
+
+        <div class="main">
+            {block:Posts}
+
+            {block:Photo}
+                <section class="entry" style="background-image: url({PhotoURL-1280});">
+                    <article class="entry-info" >
+                        <div class="caption">
+                            {Caption}
+                        </div>
+                        <div class="like-btn">
+                            {LikeButton}
+                        </div>
+                        <div class="reblog-btn">
+                            {ReblogButton}
+                        </div>
+                    </article>
+                    <a class="fancybox-thumb" rel="fancybox-thumb" href="{PhotoURL-1280}" title="{PhotoAlt}"><img src="http://static.tumblr.com/qav74ey/gjZnelmte/enlarge.png" alt="Enlarge" /></a>
+                    {block:Pagination}
+                        <div class="pagination">
+                            <a href="{PreviousPage}">Previous</a> | <a href="{NextPage}">Next</a>
+                        </div>
+                    {/block:Pagination}
+                </section>
+            {block:Photo}
+
+            <!--
+            <section class="entry" style="background-image: url(http://johnlusky.com/themecannon/howitzer/img/photo-entry-3.jpg);">
+                <article class="entry-info" >
+                    Photoset entry example 2
+                </article>
+                <a class="fancybox-thumb" rel="fancybox-thumb" href="http://johnlusky.com/themecannon/howitzer/img/photo-entry-3.jpg" title="Image caption"><img src="http://johnlusky.com/themecannon/howitzer/img/photo-entry-3.jpg" width="250" alt="" /></a>
+                <div class="pagination">
+                    <a href="#">Previous</a> | <a href="#">Next</a>
+                </div>
+            </section>
+            -->
+
+            {block:Text}
+                <section class="entry">
+                    <article class="entry-info" >
+                        <div class="caption">
+                            {block:Title}
+                                <a href="{Permalink}">{Title}</a>
+                            {/block:Title}
+                        </div>
+                        <div class="like-btn">
+                            {LikeButton}
+                        </div>
+                        <div class="reblog-btn">
+                            {ReblogButton}
+                        </div>
+                    </article>
+                    <article class="content">
+                        {Body}
+                    </article>
+                    {block:Pagination}
+                        <div class="pagination">
+                            <a href="{PreviousPage}">Previous</a> | <a href="{NextPage}">Next</a>
+                        </div>
+                    {/block:Pagination}
+                </section>
+            {/block:Text}
+
+            {block:Video}
+                <section class="entry">
+                    <article class="video">
+                        {VideoEmbed-700}
+                    </article>
+                    <article class="entry-info" >
+                        <div class="caption">
+                            {Caption}
+                        </div>
+                        <div class="like-btn">
+                            {LikeButton}
+                        </div>
+                        <div class="reblog-btn">
+                            {ReblogButton}
+                        </div>
+                    </article>
+                    {block:Pagination}
+                        <div class="pagination">
+                            <a href="{PreviousPage}">Previous</a> | <a href="{NextPage}">Next</a>
+                        </div>
+                    {/block:Pagination}
+                </section>
+            {/block:Video}
+
+            <!--
+            <section class="entry">
+                <article class="entry-info" >
+                  Audio entry example
+                </article>
+                <div class="pagination">
+                    <a href="#">Previous</a> | <a href="#">Next</a>
+                </div>
+            </section>
+            -->
+
+            {/block:Posts}
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+        <script src="http://static.tumblr.com/qav74ey/snMnejtfc/plugins.js"></script>
+        <script src="http://static.tumblr.com/qav74ey/zmmnejtgy/scripts.js"></script>
+
+
+    </body>
+</html>
